@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 6</title>
+</head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500&display=swap" rel="stylesheet">
+<style>
+
+*{
+margin: 0;
+padding: 0;
+text-decoration: none;
+outline: none;
+border: none;
+/* text-transform: capitalize; */
+transition: all .2s linear;
+}
+
+*::selection{
+    background-color: rgb(216, 212, 1);
+    color: rgba(0, 0, 0, 0.678);
+}
+::placeholder{
+    color: white;
+    padding-left: 10px;
+    padding-top: 10px;
+    /* text-align: center; */
+}
+html{
+    /* font-size: 62.7%; */
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 13px;
+}
+
+html::-webkit-scrollbar-track{
+    background: #222;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:rgb(216, 212, 1) ;
+}
+
+body{
+    background: black;
+    overflow-x: hidden;
+    /* font-family: 'Baloo Bhai 2', cursive;   */
+/* font-family: fantasy;*/
+/* font-family: Georgia, 'Times New Roman', Times, serif;*/
+/* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    /* font-family: cursive;*/
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* font-family: 'Baloo Bhai 2', cursive;   */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+}
+
+header{
+position: fixed;
+z-index: 1000;
+height: 100%;
+width: 20rem;
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: center;
+flex-flow: column;
+background: rgb(27, 27, 27);
+
+}
+
+.user img{
+height: 10rem;
+width: 10rem;
+border-radius: 50%;
+object-fit: cover;
+/* margin-bottom: 1rem; */
+border: 0.4rem solid rgb(216, 212, 1);
+}
+.name{
+    font-size: 2rem;
+    color: white;
+}
+.post{
+        font-size: 1.3rem;
+        color: white;
+}
+.nav{
+    width: 100%;
+    /* list-style: none; */
+}
+.nav ul{
+    list-style: none;
+    padding: 1rem 1.4rem;
+}
+.nav ul li a{
+    display: block;
+    margin: 1rem 1rem;
+    background: #333;
+    color: rgb(255, 255, 255);
+    border-radius: 5rem ;
+    font-size: 1.3rem;
+    padding-top: 5px;
+    /* text-align: center; */
+    /* align-items: center; */
+    /* font-size: 20px; */
+} 
+.nav ul li a:hover{
+    background:rgba(235, 231, 1, 0.623) ;
+}
+#menu{
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    font-size: 2.5rem;
+    z-index: 1000;
+    padding: 1rem 1.5rem ;
+    /* display: none; */
+}
+.Home{
+    padding-left: 28rem;
+    color: white;
+    /* display: flex; */
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+    /* min-height: 40vh; */
+    margin-top: 200px;
+    padding-right: 8rem;    
+}
+.Home h1{
+    /* padding: 20px; */
+    font-size: 40px;
+    /* padding: 10px; */
+}
+.Home p{
+    font-size: 15px;
+}
+.img img{
+    padding-left: 20px;
+    /* color: white; */
+    /* background-color: white; */
+    color: #222;    
+}
+.heading{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 50px;
+    margin-left: 17rem;
+    font-weight: bold;
+}
+.aboutrow{
+    flex-wrap: wrap;
+    display: flex;
+    /* justify-content: center; */
+}
+/* .about-left-col{
+    flex-basis: 25%;    
+} */
+.about-right-col{
+    /* flex-basis: 25%; */
+    padding-top: 30px;
+    /* margin-right: 100px; */
+    
+}
+.project{
+    flex-basis: 25%;
+    box-shadow: 3px 4px 5px rgb(216, 212, 1);
+    padding: 20px;
+    /* padding-right: 10px  ; */
+    /* background-color: brown; */
+}
+#education h1{
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 50px;
+    margin-left: 17rem;
+}
+.edurow{
+    margin-left: 350px;
+    padding-top: 45px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.educol{
+    flex-basis: 25%;
+    padding: 25px;
+    box-shadow: 4px 0px 4px rgba(255, 255, 0, 0.904);
+    padding-right: 30px;
+    padding-top: 30px;
+    /* border-radius: 30px; */
+}
+.educol p{
+    font-size: 14px;
+}
+.educol h2{
+    background-color: #222;
+    border-radius: 50px;
+    width: 100%;
+    padding-bottom: 10px;
+    text-align: center;
+    height: 30px;
+}
+.educol progress{
+    width: 80%;
+}
+.educol span{
+    color:  rgba(255, 255, 0, 0.904);
+}
+.educol:hover{
+    transform: rotateY(30deg);
+}
+.about h2{
+    font-size: 40px;
+    color: white;
+}
+.contact h2{
+    font-size: 40px;
+    margin-left: 300px;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    text-align: center;
+    justify-content: center;
+}
+.contact h3{
+    padding: 10px;
+    
+    margin-left: 30px;
+}
+.contact{
+    color: white;
+    /* text-align: center; */
+    
+}
+.contactrow{
+    display: flex;
+}
+.contact-left-col{
+    flex-wrap: wrap;
+    flex-basis: 50%;
+    margin-left: 400px;
+}
+.contact-left-col p{
+    padding: 10px;
+    padding-top: 10px;
+}
+.contact-left-col a{
+    color: white;
+}
+.contact-right-col{
+    padding-right: 70px;
+}
+.button{
+    width: 80px;
+    height: 25px;
+    background-color: #666;
+    border-radius: 20px;
+    /* padding-top: 10px; */
+    color: white;
+    font-weight: 550;
+    font-size: 15px;
+}
+.footer{
+    background-color: rgba(255, 255, 0, 0.904);
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+    padding-left: 280px;
+}
+.service h2{
+font-size: 40px;
+margin-left: 400px;
+color: white;
+/* padding: 100px; */
+padding-left: 300px;
+/* padding-top: 100; */
+/* padding-bottom: 100; */
+}
+.service{
+    padding-top: 60px;
+    padding-bottom: 50px;
+}
+.servicerow{
+    display: flex;
+    color: white;
+    /* font-size: 100px; */
+    margin-left: 350px;
+    flex-wrap: wrap;
+}
+.servicecol{
+    flex-basis: 25%;
+    padding: 30px;
+    box-shadow: 0px 5px 5px rgba(255, 255, 0, 0.904);
+    /* transform:rotate3d(10,10,60,20deg) ; */
+    border-radius: 50px;
+}
+.servicecol h2{
+    font-size: 21.4px;
+}
+.servicecol:hover{
+    transform:rotate3d(10,60,60,360deg) ;
+    transition-duration: 1.5s;
+}
+#four:hover{
+    transform:rotate3d(10,60,60,-360deg) ;
+    transition-duration: 1.5s;
+}
+#five:hover{
+    transform:rotate3d(10,60,60,-360deg) ;
+    transition-duration: 1.5s;
+}
+#six:hover{
+    transform:rotate3d(10,60,60,-360deg) ;
+    transition-duration: 1.5s;
+}
+
+</style>
+
+<body>
+    
+<header>
+    <div class="user">
+        <img src="codingill.png" alt="">
+        <h2 class="name">
+            Ansh Mishra
+        </h2>
+        <p class="post">
+            Front End Developer
+        </p>
+    </div>
+    <nav class="nav">
+        <ul>
+            <li> <a href="#home">        Home            </a>    </li>
+            <li> <a href="#about">    About Me        </a>    </li>
+            <li> <a href="#education">    Skills         </a>    </li>
+            <li> <a href="#service">        Services       </a>    </li>
+            <li> <a href="#contact">     Contact Me   </a>    </li>
+        </ul>
+    </nav>
+     <!-- <img src="market.jpg" alt="" width="10px"> -->
+     <div class="img">
+         <a href="https://twitter.com/">   <img src="twitter.png" alt="" width="25px">  </a>
+          <a href="https://www.whatsapp.com/"> <img src="whatsapp.png" alt="" width="25px">  </a>
+          <a href=" http://in.youtube.com/">  <img src="youtube.png" alt="" width="25px">  </a>
+          <a href="https://www.facebook.com">  <img src="facebook.png" alt="" width="25px">  </a>
+    </div>
+</header>
+        <section id="home" class="Home">
+            <h3>Hy Everyone</h3>
+            <h1>I am <span style="color: rgba(255, 255, 0, 0.904);">ANSH MISHRA</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta iusto cumque doloremque possimus ad, cum aliquid ut quod facere cupiditate!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. A beatae voluptatem quaerat optio nisi iste at blanditiis illum rerum voluptatum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos asperiores rerum nobis iure consequuntur repellendus soluta ratione perspiciatis earum id, fugiat quam quo deleniti eum.
+            </p>
+            <img src="codingill.png" alt="" width="300px">
+           
+        </section>
+
+        <section class="about" id="about">
+
+            <h1 class="heading"> <span style="color: rgba(255, 255, 0, 0.904);">About</span> Me</h1>
+            <hr style="width: 10px; color: white;">
+            <div class="aboutrow" style="color: white;">
+                <div class="about-left-col" style="margin-left: 400px; padding-top: 80px; color:  rgba(255, 255, 0, 0.904); flex-basis: 50%;">
+                    <h3>  <span style="color: white; padding-right: 10px; padding-top: 10px; line-height: 50px;">  Name :   </span>   Ansh Mishra  </h3>
+                    <h3>  <span style="color: white; padding-right: 10px; padding-top: 10px; line-height: 50px;">    Age: </span>     18</h3>
+                    <h3>  <span style="color: white; padding-right: 10px; padding-top: 10px; line-height: 50px;">   Qualification  :</span>  B.tech(Pursing)   </h3>
+                    <h3>  <span style="color: white; padding-right: 10px; padding-top: 10px; line-height: 50px;">   Work :  </span>   Front End Developer  </h3>
+                    <h3>  <span style="color: white; padding-right: 10px; padding-top: 10px; line-height: 50px;">    Languages : </span>  Hindi & English   </h3>
+                </div>
+                <div class="about-right-col" ">
+                   <div class="project">
+                       <h2>10+</h2>
+                       <p>Project Complete </p>
+                   </div>
+                   <div class="project"">
+                    <h2>Excellent</h2>
+                    <p>Client Experience </p>
+                </div>
+                <div class="project" >
+                    <h2>1 year+</h2>
+                    <p>Experience </p>
+                </div>
+                <div class="project">
+                    <h2> 100% </h2>
+                    <p> Client Satisfaction </p>
+                </div>
+                   
+                   
+                </div>
+            </div>
+        </section>
+        
+        <section id="education">
+      <div class="skill">
+           <h1 style="font-weight: bold;"> <span style="color:rgba(255, 255, 0, 0.904) ;">My</span> Skills</h1>
+        </div>    
+        <div class="edurow">
+            <div class="educol">
+                <!-- <h3>2018</h3> -->
+                <h2>HTML</h2> <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus repellendus amet nulla eaque voluptates consequatur dolorum eius ratione libero ipsa!</p>
+                <p>
+                    <!-- <span>HTML</span>  <br> -->
+                    <progress value="90" max="100" style="background-color: red; width: 80%;"></progress>
+                    <span style="color:  rgba(255, 255, 0, 0.904);">90%</span>
+                    </p>
+            </div> 
+            <div class="educol">
+                <!-- <h3>2018</h3> -->
+                <h2>CSS</h2>  <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus repellendus amet nulla eaque voluptates consequatur dolorum eius ratione libero ipsa!</p>
+                <p>
+                    <!-- <span>CSS</span> <br> -->
+                    <progress value="70" max="100"></progress>
+                    <span>70%</span> 
+                    </p>
+            </div>
+            <div class="educol">
+                <!-- <h3>2018</h3> -->
+                <h2>Python</h2>  <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus repellendus amet nulla eaque voluptates consequatur dolorum eius ratione libero ipsa!</p>
+                <p>
+                    <!-- <span>Python</span> <br> -->
+                    <progress value="40" max="100"></progress>
+                    <span>40%</span>
+                    </p>
+            </div>
+            <div class="educol">
+                <!-- <h3>2018</h3> -->
+                <h2>Stock Market</h2>  <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus repellendus amet nulla eaque voluptates consequatur dolorum eius ratione libero ipsa!</p>
+                <p>
+                    <!-- <span>Stock Market</span> <br> -->
+                    <progress value="80" max="100"></progress>
+                    <span>80%</span>
+                    </p>
+            </div>
+            <div class="educol">
+                <!-- <h3>2018</h3> -->
+                <h2>Hacking</h2>  <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus repellendus amet nulla eaque voluptates consequatur dolorum eius ratione libero ipsa!</p>
+                <p>
+                    <!-- <span>Hacking</span> <br> -->
+                    <progress value="30" max="100"></progress>
+                    <span>30%</span>
+                    </p>   
+            </div>
+            <div class="educol">
+                <!-- <h3>2018</h3> -->
+                <h2>Digital Marketing</h2>  <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus repellendus amet nulla eaque voluptates consequatur dolorum eius ratione libero ipsa!</p>
+                <p>
+                    <!-- <span>Digital Marketing</span> <br> -->
+                    <progress value="30" max="100"></progress>
+                    <span>30%</span>
+                    </p>  
+            </div>
+          
+        </div>
+
+        </section>
+
+        <section id="service">
+            
+            <div class="service">
+                <h2>Services</h2>
+            </div>
+
+            <div class="servicerow">
+                <div class="servicecol" id="one">
+                    <h2>Web Designing</h2>  <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus repellendus amet nulla eaque voluptates consequatur dolorum eius ratione libero ipsa!</p>
+                </div>
+                <div class="servicecol" id="two">
+                    <h2>Web Development</h2>  <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus repellendus amet nulla eaque voluptates consequatur dolorum eius ratione libero ipsa!</p>
+                </div>
+                <div class="servicecol" id="three">
+                    <h2>Logo Designing</h2>  <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus repellendus amet nulla eaque voluptates consequatur dolorum eius ratione libero ipsa!</p>
+                </div>
+                <div class="servicecol" id="four">
+                    <h2>QR Code Development</h2>  <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus repellendus amet nulla eaque voluptates consequatur dolorum eius ratione libero ipsa!</p>
+                </div>
+                <div class="servicecol" id="five">
+                    <h2>Digital Marketing</h2>  <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus repellendus amet nulla eaque voluptates consequatur dolorum eius ratione libero ipsa!</p>
+                </div>
+                <div class="servicecol" id="six">
+                    <h2>Trading</h2>  <br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus repellendus amet nulla eaque voluptates consequatur dolorum eius ratione libero ipsa!</p>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="contact" id="contact">
+
+            <h2> <span style="color:rgba(255, 255, 0, 0.904);">Contact</span> Us</h2>
+            
+            <div class="contactrow">
+                <div class="contact-left-col">
+                    <h3>Contact Info</h3>
+                 <a href="mailto:ansh2003mishra@gmail.com">  <p> <span style="font-size: 23px;">📩    </span> ansh2003mishra@gmail.com</p>  </a>
+                <a href="tel:+91 7895484307"> <p> <span style="font-size: 22px;">📞    </span>7895484307</p>  </a>
+                <a href="https://goo.gl/maps/4ZRSN8cJt1A86Gxh9"> <p><span style="font-size: 22px;">🏠     </span> Kasganj(207123), India</p> </a>
+                </div>
+                <div class="contact-right-col">
+                    <form action="" class="form">
+                        <input type="text" name="" placeholder="First name" style=" color: rgba(255, 255, 0, 0.904); background-color: #333; width: 100%; height: 30px ;  padding-bottom: 10px; border-radius: 6px; " > <br> <br>
+                        <input type="text" name="" placeholder="Last name" style=" color: rgba(255, 255, 0, 0.904); background-color: #333; width: 100%; height: 30px ;  padding-bottom: 10px; border-radius: 6px;"> <br> <br>
+                        <input type="E-mail" name="" placeholder="E-mail" style=" color: rgba(255, 255, 0, 0.904); background-color: #333; width: 100%; height: 30px ;  padding-bottom: 10px; border-radius: 6px;"> <br> <br>
+                        <textarea name="" id="" cols="40" rows="10" placeholder="Message" style=" color: rgba(255, 255, 0, 0.904); background-color: #333;"></textarea> <br> <br>
+                        <button class="button">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+
+        </section>
+    
+        <footer class="footer">
+           <marquee behavior="" direction="">  Designed by Ansh Mishra | All Rights are Reserved©® </marquee>
+        </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="custom.js"></script>
+
+
+</body>
+
+</html>
